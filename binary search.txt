@@ -1,0 +1,39 @@
+/* bineary search program by Rinta maria raju */
+#include<stdio.h>
+int main()
+{
+    int x,left=0,mid,a[10],n,i,right;
+    printf("enter the size of the array");
+    scanf("%d",&n);
+    printf("enter the elements of the array");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter the element to search");
+    scanf("%d",&x);
+    while(left<right)
+    {
+        right=(n-1);
+        mid = (left+right)/2;
+        if(x>a[mid])
+        {
+            left=(mid+1);
+        }
+        else if(x=a[mid])
+        {
+            printf("the element is found at mid");
+        }
+        else if(x<a[mid])
+        {
+            right=(mid-1);
+        }
+
+    }
+    while(left>right)
+    {
+        printf("element not found");
+    }
+    return 0;
+
+}
